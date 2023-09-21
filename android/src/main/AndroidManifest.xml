@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.aboelola.zoom_native_sdk">
+ 
+     <application>
+         <activity
+            android:name='com.aboelola.zoom_native_sdk.MyMeetingActivity'
+            android:theme='@style/ZMTheme.SubWindow'
+            android:hardwareAccelerated='true' />
+
+    </application>
+</manifest>
