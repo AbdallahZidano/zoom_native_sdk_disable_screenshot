@@ -87,7 +87,7 @@ extension SwiftZoomNativeSdkPlugin{
             //            meetingService.video
 
             meetingService.joinMeeting(with: joinMeetingParameters)
-            meetingService.leaveMeeting(with: LeaveMeetingCmd.leave)
+            // meetingService.leaveMeeting(with: LeaveMeetingCmd.leave)
 
         }else{
             print("Hello From ffffff")
