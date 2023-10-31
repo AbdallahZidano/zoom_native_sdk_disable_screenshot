@@ -34,7 +34,7 @@ class ZoomNativeSdkPlugin : FlutterPlugin, MethodChannel.MethodCallHandler, Meet
             "initZoom" -> {
                 val arguments: Map<String, String>? = call.arguments<Map<String, String>>()
                 
-                initZoom(arguments?.get("appKey"), arguments?.get("appSecret"))
+                initZoom(arguments?.get("jwtToken"))
                
                 result.success(true)
             }
@@ -56,12 +56,11 @@ class ZoomNativeSdkPlugin : FlutterPlugin, MethodChannel.MethodCallHandler, Meet
         channel.setMethodCallHandler(null)
     }
 
-    fun initZoom(appKey: String?, appSecret: String?) {
+    fun initZoom(jwtToken: String?) {
         zoomSDK = ZoomSDK.getInstance()
         val initParams = ZoomSDKInitParams()
         initParams.domain = WEB_DOMAIN
-        initParams.appKey = appKey
-        initParams.appSecret = appSecret
+        initParams.jwtToken = jwtToken
 
         zoomSDK?.initialize(activity, this, initParams)
         // activity.getWindow().setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE)

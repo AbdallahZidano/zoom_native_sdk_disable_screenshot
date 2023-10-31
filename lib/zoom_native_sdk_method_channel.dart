@@ -11,15 +11,11 @@ class MethodChannelZoomNativeSdk extends ZoomNativeSdkPlatform {
 
   @override
   Future<bool?> initZoom({
-    required String appKey,
-    required String appSecret,
+    required String jwtToken,
   }) async {
     final version = await methodChannel.invokeMethod<bool>(
       'initZoom',
-      {
-        "appKey": appKey,
-        "appSecret": appSecret,
-      },
+      {"jwtToken": jwtToken},
     );
     return version;
   }

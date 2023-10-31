@@ -33,8 +33,7 @@ class _MyAppState extends State<MyApp> {
     try {
       if (!isInitialized) {
         isInitialized = (await _zoomNativelyPlugin.initZoom(
-              appKey: "",
-              appSecret: "",
+              jwtToken: "",
             )) ??
             false;
       }

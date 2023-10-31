@@ -24,8 +24,7 @@ abstract class ZoomNativeSdkPlatform extends PlatformInterface {
   }
 
   Future<bool?> initZoom({
-    required String appKey,
-    required String appSecret,
+    required String jwtToken,
   }) {
     throw UnimplementedError('initZoom() has not been implemented.');
   }
@@ -34,7 +33,6 @@ abstract class ZoomNativeSdkPlatform extends PlatformInterface {
     required String meetingNumber,
     required String meetingPassword,
     required String displayName,
-    
   }) {
     throw UnimplementedError('joinMeting() has not been implemented.');
   }
